@@ -8,8 +8,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule} from '@angular/material/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 // Hier kannst du beliebig weitere Material-Module hinzufügen
 export const MATERIAL_IMPORTS = [
@@ -23,5 +24,6 @@ export const MATERIAL_IMPORTS = [
   MatInputModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  FormsModule
 ];
