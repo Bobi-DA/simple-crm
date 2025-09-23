@@ -11,6 +11,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Hier kannst du beliebig weitere Material-Module hinzufügen
 export const MATERIAL_IMPORTS = [
@@ -25,5 +26,6 @@ export const MATERIAL_IMPORTS = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatFormFieldModule,
-  FormsModule
+  FormsModule,
+  MatProgressBarModule
 ];
