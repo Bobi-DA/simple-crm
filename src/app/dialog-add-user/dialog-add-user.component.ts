@@ -4,6 +4,8 @@ import { User } from '../../models/user.class';
 import { Firestore, collection, collectionData, addDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { MatDialogRef } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-dialog-add-user',
   standalone: true,
@@ -17,7 +19,7 @@ export class DialogAddUserComponent {
   items$: Observable<any[]>;
   loading = false;
 
-  constructor(private firestore: Firestore) {
+  constructor(private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddUserComponent>) {
     const aCollection = collection(this.firestore, 'items');
     this.items$ = collectionData(aCollection);
     console.log('Firestore verbunden:', firestore);
@@ -33,6 +35,7 @@ export class DialogAddUserComponent {
       console.error('Fehler:', error);
     } finally {
       this.loading = false;
+      this.dialogRef.close();
     }
 
     console.log('User gespeichert:', this.user);

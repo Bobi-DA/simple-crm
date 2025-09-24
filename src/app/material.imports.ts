@@ -27,5 +27,6 @@ export const MATERIAL_IMPORTS = [
   MatNativeDateModule,
   MatFormFieldModule,
   FormsModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  
 ];
